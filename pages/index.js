@@ -14,7 +14,6 @@ const inter = Inter({subsets: ['latin']})
 export default function Home() {
     return (
         <>
-            <Navbar/>
             <main className="container m-auto">
                 <div className="home__page__banner__box">
                     <Sidebar/>
@@ -51,7 +50,6 @@ export default function Home() {
                     </div>
                 </div>
             </main>
-            <Footer/>
         </>
     )
 }
