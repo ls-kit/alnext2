@@ -6,15 +6,13 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-color: #fe6f03;
+  --secondary-color: #fc4a1a;
+  --nav-color: #000;
+  --white-color: #fff;
+  --black-color: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,4 +22,147 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+.flex-3-1 {
+  flex: 3 1;
+}
+.flex-1-1 {
+  flex: 1 1;
+}
+.flex-2-1 {
+  flex: 2 1;
+}
+
+.bg-theme {
+  background: var(--nav-color);
+}
+
+.container {
+  max-width: 94%;
+}
+
+.search-input {
+  width: 100%;
+  display: flex;
+  flex: 1 1;
+  padding: 4px 4px 4px 0.75rem;
+  border: none;
+  height: 36px;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  font-weight: 500;
+  font-size: 14px;
+}
+.search-input:focus {
+  outline: none;
+}
+
+.camera-icon {
+  display: flex;
+  margin-right: 5px;
+  align-content: center;
+  justify-content: center;
+}
+
+.search-button {
+  background: var(--primary-color);
+  height: 38px;
+  border-radius: 64px;
+  margin-right: 3px;
+  padding: 0;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  min-width: 45px;
+  border:none;
+  align-items: center;
+}
+.footer-box {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.footer-menu {
+
+}
+
+
+.sidebar {
+  height: 620px;
+  width: 245px;
+  overflow-y: auto;
+  background: var(--white-color);
+  padding: 0 20px;
+}
+
+.sidebar li {
+  margin-top: 15px;
+}
+
+.sidebar a {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.home__page__banner__box {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 5%;
+}
+
+.Banner {
+  width: 86%;
+}
+
+.BannerSliderImg img {
+  width: 100%;
+}
+
+.Banner__box {
+  background: var(--white-color);
+  padding: 27px;
+}
+
+.Banner__box__item {
+  text-align: center;
+}
+
+.Banner__box__item img {
+  width: 80px;
+  height: 80px;
+}
+
+.Banner__box__item h3 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--black-color);
+  margin-top: 10px;
+}
+
+.Banner__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
 }
