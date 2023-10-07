@@ -1,12 +1,30 @@
 import React, {useEffect} from "react";
 import Slider from "react-slick";
 
-import 'swiper/css';
-import 'swiper/css/pagination';
 import {useDispatch} from "react-redux";
 import init from "../modules/init";
 
 export default function Home() {
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            }
+        ]
+    };
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(init.loadGeneral()).then(r => r)
@@ -22,149 +40,27 @@ export default function Home() {
                             <a href=""
                                className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
                                 <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
+                                     src="/images/left-product (1).png" alt=""/>
+                                <span
+                                    className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
                             </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt="" />
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
+
                         </div>
                     </div>
-                    <div className="innovate-hero-main-content flex flex-col ml-2.5 max-[768px]:w-full max-[768px]:ml-0 max-[768px]:order-1">
+                    <div
+                        className="innovate-hero-main-content flex flex-col ml-2.5 max-[768px]:w-full max-[768px]:ml-0 max-[768px]:order-1">
                         <div className="innovate-hero__slick-parent">
-                            <div>
-                                <img className="h-auto block pr-1" src="/images/banner (1).png" alt=""  />
-                            </div>
-                            <div>
-                                <img className="h-auto block pr-1" src="/images/banner (2).png" alt=""  />
-                            </div>
-                            <div>
-                                <img className="h-auto block pr-1" src="/images/banner (3).png" alt=""  />
-                            </div>
+                            <Slider {...settings}>
+                                <div>
+                                    <img className="h-auto block pr-1" src="/images/banner (1).png" alt=""/>
+                                </div>
+                                <div>
+                                    <img className="h-auto block pr-1" src="/images/banner (2).png" alt=""/>
+                                </div>
+                                <div>
+                                    <img className="h-auto block pr-1" src="/images/banner (3).png" alt=""/>
+                                </div>
+                            </Slider>
                         </div>
                         <div className="innovate-hero__product">
                             <div className="innovate-scrollbar-hidden w-full overflow-auto scroll-smooth">
@@ -174,7 +70,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
@@ -186,7 +82,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
@@ -198,7 +94,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
@@ -210,7 +106,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
@@ -222,7 +118,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
@@ -234,7 +130,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
@@ -246,7 +142,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
@@ -258,7 +154,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
@@ -270,7 +166,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
@@ -282,7 +178,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
@@ -294,7 +190,7 @@ export default function Home() {
                                         <div
                                             className="w-20 h-20 bg-[#f7951d46] rounded-[20px] flex items-center justify-center">
                                             <img className="w-[85%] h-[85%] object-contain"
-                                                 src="/images/left-product__4_-removebg-preview.png" alt=""  />
+                                                 src="/images/left-product__4_-removebg-preview.png" alt=""/>
                                         </div>
                                         <div>
                                             <p className="text-sm mt-4 mb-2 line-clamp-1 max-[768px]:text-center max-[768px]:line-clamp-2">২০
