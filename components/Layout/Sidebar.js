@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
     return (
-        <div className="sidebar">
+        <div className="sidebar hideonmobile">
             <ul>
                 <li>
                     <Link href="">
