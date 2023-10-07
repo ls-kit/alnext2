@@ -1,8 +1,5 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Slider from "react-slick";
-
-import {useDispatch} from "react-redux";
-import init from "../modules/init";
 
 export default function Home() {
     const settings = {
@@ -25,10 +22,7 @@ export default function Home() {
             }
         ]
     };
-    const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(init.loadGeneral()).then(r => r)
-    }, [])
+
     return (
         <>
             <section className="innovate-main-container">
