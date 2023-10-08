@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "name": "Bags",
+      "icon": "left-product (2).png"
+    },
+    {
+      "name": "Shoes",
+      "icon": "left-product (4).png"
+    },
+    {
+      "name": "Jewelry",
+      "icon": "icon-3.png"
+    },
+    {
+      "name": "Makeup",
+      "icon": "icon-3.png"
+    },
+    {
+      "name": "Men's Clothing",
+      "icon": "icon-3.png"
+    },
+    {
+      "name": "Girls Clothing",
+      "icon": "icon-3.png"
+    }
+  ]
+}

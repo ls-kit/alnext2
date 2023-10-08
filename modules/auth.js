@@ -1,4 +1,4 @@
-import { createSlice, createSelector } from '@reduxjs/toolkit';
+import {createSlice, createSelector} from '@reduxjs/toolkit';
 
 const initialState = {
     isAuthenticated: false,
@@ -17,7 +17,7 @@ const authSlice = createSlice({
     initialState,
     reducers: {
         setUser: (state, action) => {
-            const { user, token, isAuthenticated, OTP_response } = action.payload;
+            const {user, token, isAuthenticated, OTP_response} = action.payload;
             state.user = user;
             state.token = token;
             state.isAuthenticated = isAuthenticated;
@@ -32,29 +32,14 @@ const authSlice = createSlice({
     },
 });
 
-export const { setUser, otpSubmit, setWishlist } = authSlice.actions;
+export const {setUser, otpSubmit, setWishlist} = authSlice.actions;
 
 // Selectors
 export const selectAuthState = (state) => state.auth;
-export const selectUser = createSelector(
-    selectAuthState,
-    (auth) => auth.user
-);
-export const selectToken = createSelector(
-    selectAuthState,
-    (auth) => auth.token
-);
-export const selectIsAuthenticated = createSelector(
-    selectAuthState,
-    (auth) => auth.isAuthenticated
-);
-export const selectOTPResponse = createSelector(
-    selectAuthState,
-    (auth) => auth.OTP_response
-);
-export const selectWishlist = createSelector(
-    selectAuthState,
-    (auth) => auth.wishlist
-);
+export const selectUser = createSelector(selectAuthState, (auth) => auth.user);
+export const selectToken = createSelector(selectAuthState, (auth) => auth.token);
+export const selectIsAuthenticated = createSelector(selectAuthState, (auth) => auth.isAuthenticated);
+export const selectOTPResponse = createSelector(selectAuthState, (auth) => auth.OTP_response);
+export const selectWishlist = createSelector(selectAuthState, (auth) => auth.wishlist);
 
 export default authSlice.reducer;

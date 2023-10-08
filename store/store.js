@@ -5,7 +5,7 @@ import thunk from "redux-thunk";
 import {rootReducer} from "./reducers";
 
 const persistConfig = {
-    key: 'alibuybd_auth',
+    key: 'ali_buy',
     storage,
 
 }

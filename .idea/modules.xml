@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/aliba.iml" filepath="$PROJECT_DIR$/.idea/aliba.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/aliba-ecommerce-project/.idea/aliba-ecommerce-project.iml" filepath="$USER_HOME$/Downloads/aliba-ecommerce-project/.idea/aliba-ecommerce-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../aliba_int_frontend/.idea/aliba_int_frontend.iml" filepath="$PROJECT_DIR$/../aliba_int_frontend/.idea/aliba_int_frontend.iml" />
     </modules>
   </component>
 </project>

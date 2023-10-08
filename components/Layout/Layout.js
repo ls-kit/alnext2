@@ -2,14 +2,15 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import init from "../../modules/init";
+import init, {loadGeneral} from "../../modules/init";
+import {getSetting} from "../../utils/Helpers";
 
 const Layout = ({children}) => {
     const dispatch = useDispatch()
-    const general = useSelector(state => init.selectors.selectGeneral)
-    console.log('general', general)
+    const general = useSelector(state => state.INIT.general)
+
     useEffect(() => {
-        dispatch(init.loadGeneral()).then(r => console.log(r))
+        dispatch(loadGeneral())
     }, [])
     return (
         <>

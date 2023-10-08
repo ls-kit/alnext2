@@ -1,7 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
+import { getCategories } from "/utils/Helpers";
 
 export default function Home() {
+    const categories = getCategories();
+
     const settings = {
         dots: false,
         infinite: true,
@@ -31,13 +34,17 @@ export default function Home() {
                         className="innovate-scrollbar-hidden bg-white overflow-auto w-[240px] scroll-smooth max-[768px]:w-full max-[768px]:ml-0 max-[768px]:order-2 max-[768px]:mt-1">
                         <div
                             className="max-[768px]:flex-row max-[768px]:flex-wrap flex flex-col py-1.5 px-3 custom-scrollbar-height">
-                            <a href=""
-                               className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6">
-                                <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                     src="/images/left-product (1).png" alt=""/>
-                                <span
-                                    className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">Bags</span>
-                            </a>
+
+                            {categories.map((category, index) => (
+                                <a href=""
+                                   className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6" key={index}>
+                                    <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
+                                         src={`/images/${category.icon}`} alt=""/>
+                                    <span
+                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">{category.name}</span>
+                                </a>
+                            ))}
+
 
                         </div>
                     </div>
