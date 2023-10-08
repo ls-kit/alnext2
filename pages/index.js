@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { getCategories } from "/utils/Helpers";
+import CategoryProducts from "../components/Product/CategoryProducts";
 
 export default function Home() {
     const categories = getCategories();
@@ -39,7 +40,7 @@ export default function Home() {
                                 <a href=""
                                    className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6" key={index}>
                                     <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                         src={`/images/${category.icon}`} alt=""/>
+                                         src={category.icon} alt=""/>
                                     <span
                                         className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">{category.name}</span>
                                 </a>
@@ -205,6 +206,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <CategoryProducts/>
         </>
     )
 }
