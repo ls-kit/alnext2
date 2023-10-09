@@ -14,9 +14,9 @@ const Layout = ({children}) => {
     }, [])
     return (
         <>
-            <Navbar/>
+            <Navbar general={general}/>
                 {children}
-            <Footer/>
+            <Footer general={general}/>
         </>
     )
 }

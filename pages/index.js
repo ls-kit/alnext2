@@ -2,9 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import { getCategories } from "/utils/Helpers";
 import CategoryProducts from "../components/Product/CategoryProducts";
+import {useSelector} from "react-redux";
 
 export default function Home() {
+
     const categories = getCategories();
+    const general = useSelector(state => state.INIT.general)
 
     const settings = {
         dots: false,
@@ -206,7 +209,8 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <CategoryProducts/>
+            <CategoryProducts general={general}/>
         </>
     )
 }
+

@@ -1,6 +1,9 @@
-import Link from "next/link";
+import {FaCartShopping} from "react-icons/fa6";
+import {AiOutlineHeart, AiOutlineUser} from "react-icons/ai";
+import {getSetting, loadAsset} from "/utils/Helpers";
 
-const Navbar = () => {
+const Navbar = ({general}) => {
+    const frontend_logo_menu = getSetting(general, "frontend_logo_menu", "/assets/demos/logo.png");
     return (
         <header
             className="h-16 fixed top-0 left-0 right-0 z-50 bg-white max-[768px]:h-auto max-[768px]:pt-3 max-[768px]:pb-3">
@@ -8,7 +11,7 @@ const Navbar = () => {
                 className="innovate-main-container pl-5 pr-5 max-[768px]:flex-wrap flex justify-between items-center h-full ml-auto mr-auto">
                 <div className="max-[768px]:order-1">
                     <a href="">
-                        <img className="w-[80px]" src="/images/png-logo.png" alt="" />
+                        <img className="w-[80px]" src={loadAsset(frontend_logo_menu)} alt="" />
                     </a>
                 </div>
                 <div
@@ -25,13 +28,13 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-baseline max-[768px]:order-2">
                     <a href="" className="block ml-4">
-                        <i className="fa-solid fa-cart-shopping text-[28px] text-[#F15B29]"/>
+                        <FaCartShopping className={'text-[28px] text-[#F15B29]'}/>
                     </a>
                     <a href="" className="block ml-4">
-                        <i className="fa-regular fa-heart text-[28px] text-[#F15B29]"/>
+                        <AiOutlineHeart className={'text-[28px] text-[#F15B29]'}/>
                     </a>
                     <a href="" className="block ml-4">
-                        <i className="fa-regular fa-user text-[28px] text-[#F15B29]"/>
+                        <AiOutlineUser className={'text-[28px] text-[#F15B29]'}/>
                     </a>
                 </div>
             </nav>

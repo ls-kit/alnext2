@@ -1,6 +1,6 @@
 import _ from "lodash";
-import { useLayoutEffect, useState } from "react";
-import { useRouter } from "next/router";
+import {useLayoutEffect, useState} from "react";
+import {useRouter} from "next/router";
 import swal from "sweetalert";
 import categoriesData from "./categories.json";
 
@@ -60,7 +60,8 @@ export const find_cat_parent = (categories, ParentId) => {
  * @returns {string|*}
  */
 export const loadAsset = (asset) => {
-    const asset_base_url = process.env.REACT_APP_ASSET_BASE_URL;
+    console.log('Loading asset', process.env.NEXT_PUBLIC_APP_ASSET_BASE_URL)
+    const asset_base_url = process.env.NEXT_PUBLIC_APP_ASSET_BASE_URL;
     if (asset_base_url) {
         return asset_base_url + "/" + asset;
     }
@@ -73,7 +74,7 @@ export const loadAsset = (asset) => {
  * @returns {string|*}
  */
 export const loadCatImg = (category) => {
-    const asset_base_url = process.env.REACT_APP_ASSET_BASE_URL;
+    const asset_base_url = process.env.NEXT_PUBLIC_APP_ASSET_BASE_URL;
     if (!_.isEmpty(category)) {
         const picture = category.picture;
         if (picture) {
@@ -232,6 +233,7 @@ export function getBusinessDateCount(order_approved_at, end_Date) {
 
     return businessDays >= 0 ? businessDays : 0;
 }
+
 // export function getBusinessDateCount(created_at) {
 //   let startDate = new Date(created_at);
 //   let endDate = new Date();
