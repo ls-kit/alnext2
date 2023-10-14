@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/aliba.iml" filepath="$PROJECT_DIR$/.idea/aliba.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../aliba_int_frontend/.idea/aliba_int_frontend.iml" filepath="$PROJECT_DIR$/../aliba_int_frontend/.idea/aliba_int_frontend.iml" />
     </modules>
   </component>
 </project>

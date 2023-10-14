@@ -1,15 +1,18 @@
 import _ from "lodash";
+import Link from "next/link";
 
 const Product = ({product}) => {
 
+    const product_code = product.product_code ? product.product_code : product.ItemId;
     return (
-
         <a href=""
            className="flex justify-around items-center flex-col relative h-full overflow-hidden cursor-pointer min-w-[240px] bg-white border border-[#fbfbfb] px-1">
             <div className="h-56 w-full">
-                <img
-                    className="h-full w-full object-cover block object-top transition-all duration-300 ease-in"
-                    src={product.img} alt=""/>
+                <Link href={`/product/${product_code}`}>
+                    <img
+                        className="h-full w-full object-cover block object-top transition-all duration-300 ease-in"
+                        src={product.img} alt=""/>
+                </Link>
             </div>
             <div className="p-1">
                 <p className="text-sm font-normal text-[#555] m-0 mt-1 line-clamp-1">
@@ -23,7 +26,8 @@ const Product = ({product}) => {
                     <i className="fa-solid fa-star text-[#F15B29]"/>
                 </div>
                 <div className="flex justify-between items-center mt-2 mb-2">
-                    <span className="text-[#0e2954] font-bold text-base font-['Outfit']">৳ {_.round(product.sale_price)}</span>
+                    <span
+                        className="text-[#0e2954] font-bold text-base font-['Outfit']">৳ {_.round(product.sale_price)}</span>
                     <span
                         className="text-xs font-['Outfit'] font-medium text-[#777] px-1">{product.total_sold} SOLD</span>
                 </div>

@@ -3,10 +3,9 @@ import Slider from "react-slick";
 import { getCategories } from "/utils/Helpers";
 import CategoryProducts from "../components/Product/CategoryProducts";
 import {useSelector} from "react-redux";
+import Sidebar from "../components/Layout/Sidebar";
 
 export default function Home() {
-
-    const categories = getCategories();
     const general = useSelector(state => state.INIT.general)
 
     const settings = {
@@ -34,23 +33,8 @@ export default function Home() {
         <>
             <section className="innovate-main-container">
                 <div className="relative z-1 flex mt-16 max-[768px]:flex-col max-[768px]:mt-[124px]">
-                    <div
-                        className="innovate-scrollbar-hidden bg-white overflow-auto w-[240px] scroll-smooth max-[768px]:w-full max-[768px]:ml-0 max-[768px]:order-2 max-[768px]:mt-1">
-                        <div
-                            className="max-[768px]:flex-row max-[768px]:flex-wrap flex flex-col py-1.5 px-3 custom-scrollbar-height">
-
-                            {categories.map((category, index) => (
-                                <a href=""
-                                   className="flex items-center p-1.5 max-[768px]:flex-col max-[768px]:justify-center max-[768px]:w-2/6" key={index}>
-                                    <img className="w-11 h-11 object-contain mr-3 block max-[768px]:mr-0"
-                                         src={category.icon} alt=""/>
-                                    <span
-                                        className="max-[768px]:text-center text-sm uppercase font-medium font-['Outfit'] text-black">{category.name}</span>
-                                </a>
-                            ))}
-
-
-                        </div>
+                    <div className="innovate-scrollbar-hidden bg-white overflow-auto w-[240px] scroll-smooth max-[768px]:w-full max-[768px]:ml-0 max-[768px]:order-2 max-[768px]:mt-1">
+                        <Sidebar/>
                     </div>
                     <div
                         className="innovate-hero-main-content flex flex-col ml-2.5 max-[768px]:w-full max-[768px]:ml-0 max-[768px]:order-1">
