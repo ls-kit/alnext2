@@ -6,7 +6,7 @@ const ProductDetails = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const product = find_product_from_state(details, id);
+  
 
   return (
     <>
@@ -108,7 +108,7 @@ const ProductDetails = () => {
               <div className="max-[1400px]:w-full custom-info-width">
                 <div className="flex justify-between mb-2.5 max-[576px]:flex-wrap">
                   <div className="p-2.5 rounded-[4px] flex flex-col items-center justify-center max-[576px]:w-full max-[576px]:mt-1.5 mb-1.5 bg-[#F15B29] custom-info-price-width">
-                    <span className="text-white text-black text-xl font-['Outfit'] mb-1.5 text-center">
+                    <span className=" text-black text-xl font-['Outfit'] mb-1.5 text-center">
                       ৳487
                     </span>
                     <span className="text-white text-center text-base font-semibold">
@@ -192,13 +192,13 @@ const ProductDetails = () => {
                   <table className="w-full text-sm font-medium rounded-[6px] overflow-hidden font-['Outfit'] border-collapse">
                     <thead>
                       <tr className="bg-[#f2f2f2] hover:bg-[#f2f2f2]">
-                        <th className="w-1/3 font-semibold p-4 text-left text-sm font-medium">
+                        <th className="w-1/3 p-4 text-left text-sm font-medium">
                           Color
                         </th>
-                        <th className="w-1/3 font-semibold p-4 text-left text-sm font-medium">
+                        <th className="w-1/3  p-4 text-left text-sm font-medium">
                           Price
                         </th>
-                        <th className="w-1/3 font-semibold p-4 text-left text-sm font-medium">
+                        <th className="w-1/3 p-4 text-left text-sm font-medium">
                           Quantity
                         </th>
                       </tr>

@@ -49,24 +49,32 @@ export default function Home() {
           <div className="innovate-hero-main-content flex flex-col ml-2.5 max-[768px]:w-full max-[768px]:ml-0 max-[768px]:order-1">
             <div className="innovate-hero__slick-parent">
               <Slider {...settings}>
+                
                 <div>
                   <img
                     className="h-auto block pr-1"
-                    src="/images/banner (1).png"
+                    src="/images/banner-2.jpg"
                     alt=""
                   />
                 </div>
                 <div>
                   <img
                     className="h-auto block pr-1"
-                    src="/images/banner (2).png"
+                    src="/images/banner-1.jpeg"
                     alt=""
                   />
                 </div>
                 <div>
                   <img
                     className="h-auto block pr-1"
-                    src="/images/banner (3).png"
+                    src="/images/banner-3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    className="h-auto block pr-1"
+                    src="/images/banner-4.jpeg"
                     alt=""
                   />
                 </div>
